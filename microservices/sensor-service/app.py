@@ -84,7 +84,7 @@ scheduler.add_job(func=fetch_and_push_telemetry, trigger="interval", seconds=10)
 scheduler.start()
 atexit.register(lambda: scheduler.shutdown())
 
-# API endpoint to get the latest telemetry data (for testing purposes)
+
 @app.route('/api/sensors/latest', methods=['GET'])
 def get_latest_sensor_data():
     if not latest_telemetry_data:
