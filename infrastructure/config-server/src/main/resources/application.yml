@@ -1,0 +1,13 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # Configurations git repository URL
+          uri: https://github.com/Avishka30/agms-config.git
+          default-label: main
